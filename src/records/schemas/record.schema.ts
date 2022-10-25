@@ -11,9 +11,7 @@ export class Record {
   @Prop()
   priceInUah: number;
   @Prop()
-  userName: string;
-  @Prop()
-  userId: number;
+  userId: string;
 }
 
 export const RecordSchema = SchemaFactory.createForClass(Record);

@@ -4,16 +4,14 @@ import {
   Delete,
   Get,
   Param,
+  Patch,
   Post,
-  Put,
 } from '@nestjs/common';
 import { CreateRecordDto } from './dto/create-record.dto';
 import { UpdateRecordDto } from './dto/update-record.dto';
 import { RecordsService } from './records.service';
 import { Record } from './schemas/record.schema';
 
-//переробити класи на функції для подальшого використання
-//використовувати хуки
 @Controller('records')
 export class RecordsController {
   constructor(private readonly recordsService: RecordsService) {}
@@ -33,10 +31,10 @@ export class RecordsController {
   remove(@Param('id') id: string): Promise<Record> {
     return this.recordsService.remove(id);
   }
-  @Put(':id')
+  @Patch(':id')
   update(
-    @Body() updateRecordDto: UpdateRecordDto,
     @Param('id') id: string,
+    @Body() updateRecordDto: UpdateRecordDto,
   ): Promise<Record> {
     return this.recordsService.update(id, updateRecordDto);
   }
