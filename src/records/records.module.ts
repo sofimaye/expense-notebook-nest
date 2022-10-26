@@ -3,6 +3,7 @@ import { RecordsService } from './records.service';
 import { RecordsController } from './records.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Record, RecordSchema } from './schemas/record.schema';
+import { UsersModule } from '../users/users.module';
 
 @Module({
   providers: [RecordsService],
@@ -14,6 +15,7 @@ import { Record, RecordSchema } from './schemas/record.schema';
         schema: RecordSchema,
       },
     ]),
+    UsersModule,
   ],
 })
 export class RecordsModule {}

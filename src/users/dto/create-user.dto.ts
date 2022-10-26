@@ -1,4 +1,6 @@
-//to accept parameters from user
+import { IsNotEmpty } from 'class-validator';
+
 export class CreateUserDto {
+  @IsNotEmpty()
   readonly userName: string;
 }
