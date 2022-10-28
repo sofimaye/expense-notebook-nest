@@ -11,6 +11,7 @@ import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './schemas/user.schema';
+import { UserAndJokeDto } from './dto/user-joke.dto';
 
 @Controller('users')
 export class UsersController {
@@ -29,6 +30,16 @@ export class UsersController {
   @Get(':id')
   findOne(@Param('id') id: string): Promise<User> {
     return this.usersService.findOne(id);
+  }
+
+  //path for user with joke
+  @Get(':id/joke')
+  getUserWithJoke(@Param('id') id: string): Promise<UserAndJokeDto> {
+    return this.usersService.findUserWithJoke(id);
+  }
+  @Get(':id/joke/parallel')
+  getUserWithJokeParallel(@Param('id') id: string): Promise<UserAndJokeDto> {
+    return this.usersService.findUserWithJokeParallel(id);
   }
 
   @Patch(':id')
