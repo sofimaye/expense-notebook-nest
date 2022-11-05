@@ -5,11 +5,14 @@ import { UpdateRecordDto } from './dto/update-record.dto';
 import { CreateRecordDto } from './dto/create-record.dto';
 import { Record, RecordDocument } from './schemas/record.schema';
 import { UsersService } from '../users/users.service';
+import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
+import { Logger } from 'winston';
 
 @Injectable()
 export class RecordsService {
   constructor(
     @InjectModel(Record.name) private recordModel: Model<RecordDocument>,
+    @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: Logger,
   ) {}
 
   // add a UsersService to have access to userId
@@ -17,11 +20,15 @@ export class RecordsService {
   private readonly userService: UsersService;
 
   async getAll(): Promise<Record[]> {
-    return this.recordModel.find().exec();
+    const records = this.recordModel.find().exec();
+    this.logger.info(`Records: ${records}`);
+    return records;
   }
 
   async getById(id: string): Promise<Record> {
-    return this.recordModel.findById(id);
+    const oneRecord = this.recordModel.findById(id);
+    this.logger.info(`Got one record from id: ${oneRecord}`);
+    return oneRecord;
   }
 
   async create(recordDto: CreateRecordDto): Promise<Record> {
@@ -29,13 +36,20 @@ export class RecordsService {
     if (!user) throw new Error(`User not found: ${recordDto.userId}`);
 
     const newRecord = new this.recordModel(recordDto);
+    this.logger.info(`New record: ${newRecord}`);
     return newRecord.save();
   }
 
   async remove(id: string): Promise<Record> {
-    return this.recordModel.findByIdAndRemove(id);
+    const removedRecord = this.recordModel.findByIdAndRemove(id);
+    this.logger.info(`Removed record: ${removedRecord}`);
+    return removedRecord;
   }
   async update(id: string, recordDto: UpdateRecordDto): Promise<Record> {
-    return this.recordModel.findByIdAndUpdate(id, recordDto, { new: true });
+    const updatedRecord = this.recordModel.findByIdAndUpdate(id, recordDto, {
+      new: true,
+    });
+    this.logger.info(`Updated record's info ${updatedRecord}`);
+    return updatedRecord;
   }
 }
