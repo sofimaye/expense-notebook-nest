@@ -4,6 +4,8 @@ import { RecordsModule } from './records/records.module';
 import { UsersModule } from './users/users.module';
 import { WinstonModule } from 'nest-winston';
 import { format, transports } from 'winston';
+import { HttpExceptionFilter } from './exceptions/http-exception.filter';
+import { APP_FILTER } from '@nestjs/core';
 
 @Module({
   imports: [
@@ -24,6 +26,12 @@ import { format, transports } from 'winston';
         new transports.File({ filename: 'debug.log', level: 'debug' }),
       ],
     }),
+  ],
+  providers: [
+    {
+      provide: APP_FILTER,
+      useClass: HttpExceptionFilter,
+    },
   ],
 })
 export class AppModule {}

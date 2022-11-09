@@ -20,8 +20,8 @@ export class RecordsController {
     return this.recordsService.getAll();
   }
   @Get(':id')
-  getById(@Param('id') id: string): Promise<Record> {
-    return this.recordsService.getById(id);
+  getById(@Param('id') id: string): Promise<Record | string> {
+    return this.recordsService.getById(id).catch(() => 'record is not exist');
   }
   @Post()
   create(@Body() createRecordDto: CreateRecordDto): Promise<Record> {

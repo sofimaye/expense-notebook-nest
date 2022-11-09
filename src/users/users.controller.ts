@@ -6,12 +6,15 @@ import {
   Patch,
   Param,
   Delete,
+  // UseFilters,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './schemas/user.schema';
 import { UserAndJokeDto } from './dto/user-joke.dto';
+// import { HttpException } from '@nestjs/common';
+// import { HttpStatus } from '@nestjs/common';
 
 @Controller('users')
 export class UsersController {
@@ -28,8 +31,8 @@ export class UsersController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string): Promise<User> {
-    return this.usersService.findOne(id);
+  findOne(@Param('id') id: string): Promise<User | string> {
+    return this.usersService.findOne(id).catch(() => 'id is not exist');
   }
 
   //path for user with joke
