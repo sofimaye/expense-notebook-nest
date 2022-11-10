@@ -11,7 +11,7 @@ import { APP_FILTER } from '@nestjs/core';
   imports: [
     RecordsModule,
     MongooseModule.forRoot(
-      'mongodb+srv://Sofi:SMtop555@cluster0.qptsqvp.mongodb.net/?retryWrites=true&w=majority',
+      `mongodb+srv://Sofi:${process.env.DATABASE_PASSWORD}@cluster0.qptsqvp.mongodb.net/?retryWrites=true&w=majority`,
     ),
     UsersModule,
     WinstonModule.forRoot({
