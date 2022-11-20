@@ -1,0 +1,1151 @@
+{
+	"info": {
+		"_postman_id": "fbbf5805-1116-4aae-9fba-a26181b8a329",
+		"name": "Lab 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24507657"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/users",
+							"protocol": "https",
+							"host": [
+								"nest-rest-api-cx57ivsnda-lm",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "Get all users from database"
+					},
+					"response": [
+						{
+							"name": "all users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/users",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"2a9-IMPEgiVMqrfFx/IqofDFvdT+lBQ\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "d9ec613b4e18348316035455db9e5826;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:30:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "681"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6357d4627e8e72f26e62dce6\",\n        \"__v\": 0,\n        \"userName\": \"Kolya\"\n    },\n    {\n        \"_id\": \"6357d4c07e8e72f26e62dce8\",\n        \"__v\": 0,\n        \"userName\": \"Sofi\"\n    },\n    {\n        \"_id\": \"6357d4c2d666fa43f42d59f1\",\n        \"userName\": \"Sofi\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6357d4c7d666fa43f42d59f3\",\n        \"userName\": \"Ruslan\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6357d9c8cbbcadf916ec7650\",\n        \"userName\": \"Sasha\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6357d9d5cbbcadf916ec7652\",\n        \"userName\": \"Sveta\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6357d9dfcbbcadf916ec7654\",\n        \"userName\": \"Solomia\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6359635d5447518dc9a2ad14\",\n        \"userName\": \"sofi\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6359636f5447518dc9a2ad16\",\n        \"userName\": \"taras\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"635ab8719c93f33fb0c135c5\",\n        \"userName\": \"sofi\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"635ad3979615abf80f826486\",\n        \"userName\": \"sofi\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/6357d4627e8e72f26e62dce6",
+							"protocol": "https",
+							"host": [
+								"nest-rest-api-cx57ivsnda-lm",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"users",
+								"6357d4627e8e72f26e62dce6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "user by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/6357d4627e8e72f26e62dce6",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"users",
+										"6357d4627e8e72f26e62dce6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"3d-R7V7OaTRhEe7xopCzHwD2DGltwQ\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "74e490d3f6f4b7dc86b9bcee762e1b1b;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:32:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6357d4627e8e72f26e62dce6\",\n    \"__v\": 0,\n    \"userName\": \"Kolya\"\n}"
+						}
+					]
+				},
+				{
+					"name": "all records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "to get all records"
+					},
+					"response": [
+						{
+							"name": "all records",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/records",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"records"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"490-koac9sJuEl1QiBxpu4/zXkWUqPs\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "27551e056cec06ad71911040ca1090aa;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:34:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1168"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"63514fa092f11064287d52df\",\n        \"category\": \"test\",\n        \"description\": \"parfume jadore dior\",\n        \"priceInUah\": 3500,\n        \"userName\": \"Sofi\",\n        \"userId\": \"1\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6351507792f11064287d52e1\",\n        \"category\": \"clothes\",\n        \"description\": \"jacket reiss grey\",\n        \"priceInUah\": 15500,\n        \"userName\": \"Sofi\",\n        \"userId\": \"1\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"635150bd92f11064287d52e3\",\n        \"category\": \"clothes\",\n        \"description\": \"prada shirt\",\n        \"priceInUah\": 7000,\n        \"userName\": \"Sofi\",\n        \"userId\": \"1\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"635150f792f11064287d52e6\",\n        \"category\": \"cosmetics\",\n        \"description\": \"obagi face cream for normal to dry skin\",\n        \"priceInUah\": 2500,\n        \"userName\": \"Sofi\",\n        \"userId\": \"1\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6351517092f11064287d52e9\",\n        \"category\": \"gadgets\",\n        \"description\": \"iphone 13 pro max\",\n        \"priceInUah\": 45000,\n        \"userName\": \"Sofi\",\n        \"userId\": \"1\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6359642e5447518dc9a2ad19\",\n        \"category\": \"cosmetics\",\n        \"description\": \"face cream\",\n        \"priceInUah\": 3500,\n        \"userId\": \"6357d4c07e8e72f26e62dce8\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6359645c5447518dc9a2ad1d\",\n        \"category\": \"cosmetics\",\n        \"description\": \"face cream\",\n        \"priceInUah\": 3500,\n        \"userId\": \"e8\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"63596a7bb34310423ad69986\",\n        \"category\": \"games\",\n        \"description\": \"war craft\",\n        \"priceInUah\": 500,\n        \"userId\": \"6357d4627e8e72f26e62dce6\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "get record by id"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/records/63514fa092f11064287d52df",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"records",
+										"63514fa092f11064287d52df"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"91-zgRw4wHn0Hbj68XOaK4VSAjVWaQ\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "1cdfa416eeb1d48b65074f0fa21e570b;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:37:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63514fa092f11064287d52df\",\n    \"category\": \"test\",\n    \"description\": \"parfume jadore dior\",\n    \"priceInUah\": 3500,\n    \"userName\": \"Sofi\",\n    \"userId\": \"1\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "get user with a joke",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "integration with 3-rd party service, get a random joke with the user's information (with valid user's id)"
+					},
+					"response": [
+						{
+							"name": "get user with a joke",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/6357d4c07e8e72f26e62dce8/joke",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"users",
+										"6357d4c07e8e72f26e62dce8",
+										"joke"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"c2-UI7AOC6Mz5n3Ft3nY0OSimpmN3s\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "2f0e3f7160ee8879d777bbbfd6d3559a;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:57:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "194"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"joke\": {\n        \"id\": 319,\n        \"type\": \"general\",\n        \"setup\": \"Why are skeletons so calm?\",\n        \"punchline\": \"Because nothing gets under their skin.\"\n    },\n    \"user\": {\n        \"_id\": \"6357d4c07e8e72f26e62dce8\",\n        \"__v\": 0,\n        \"userName\": \"Sofi\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get user with joke parallel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "parallel request for user and joke(helps to save the response's time)"
+					},
+					"response": [
+						{
+							"name": "get user with joke parallel",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/6357d4c07e8e72f26e62dce8/joke/parallel",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"users",
+										"6357d4c07e8e72f26e62dce8",
+										"joke",
+										"parallel"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"d1-ltBFI7OVDHaMhXQLl3F20pselas\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "4c75e5cd499aeb86c96355d173f838eb;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 14:10:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "209"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"joke\": {\n        \"id\": 292,\n        \"type\": \"general\",\n        \"setup\": \"What’s the advantage of living in Switzerland?\",\n        \"punchline\": \"Well, the flag is a big plus.\"\n    },\n    \"user\": {\n        \"_id\": \"6357d4c07e8e72f26e62dce8\",\n        \"__v\": 0,\n        \"userName\": \"SOFIIA\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "a record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category\": \"food\",\n    \"description\": \"bought at market\",\n    \"priceInUah\": 1500,\n    \"userId\": \"6357d4c07e8e72f26e62dce8\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/records",
+							"protocol": "https",
+							"host": [
+								"nest-rest-api-cx57ivsnda-lm",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"records"
+							]
+						},
+						"description": "post a record with userId, user before need to be created or choose the user's id (string) which already exist.\n\nthe body's json request's fields should be like:\n\n{\n\n\"category\": \"....\",\n\n\"description\": \"...\",\n\n\"priceInUah\": 1500,\n\n\"userId\": \".....\"\n\n}"
+					},
+					"response": [
+						{
+							"name": "record",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"category\": \"food\",\n    \"description\": \"bought at market\",\n    \"priceInUah\": 1500,\n    \"userId\": \"6357d4c07e8e72f26e62dce8\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/records",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"records"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"93-p93eehp5dVszZpFtKZ8WsHJ35k0\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "a59e44e4f4361df7bfd01713770586e3;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 13:43:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"category\": \"food\",\n    \"description\": \"bought at market\",\n    \"priceInUah\": 1500,\n    \"userId\": \"6357d4c07e8e72f26e62dce8\",\n    \"_id\": \"637a2f1133a586f4c390ab1b\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "a user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/users",
+							"protocol": "https",
+							"host": [
+								"nest-rest-api-cx57ivsnda-lm",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "post a user with userName only , the body's json request's field should contain only one field \"userName\""
+					},
+					"response": [
+						{
+							"name": "a user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userName\": \"Jack\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/users",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"3c-Smz/nFDnXNt2a0YbEuVkFAWAp1k\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "9cf4581ea1d908e0df3e9b4128d57220;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 14:08:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userName\": \"Jack\",\n    \"_id\": \"637a34d133a586f4c390ab1e\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "PATCH",
+			"item": [
+				{
+					"name": "update the user's info",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"SOFIIA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/6357d4c07e8e72f26e62dce8",
+							"protocol": "https",
+							"host": [
+								"nest-rest-api-cx57ivsnda-lm",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"users",
+								"6357d4c07e8e72f26e62dce8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update the user's info",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userName\": \"SOFIIA\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/6357d4c07e8e72f26e62dce8",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"users",
+										"6357d4c07e8e72f26e62dce8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"3e-4FLL4DHVjbLubuRLnIxScIgW6Ls\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "5af79131712d1ea2f18bb0680c9a6962;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 14:05:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6357d4c07e8e72f26e62dce8\",\n    \"__v\": 0,\n    \"userName\": \"SOFIIA\"\n}"
+						}
+					]
+				},
+				{
+					"name": "record",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category\": \"parfumes\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/records/63514fa092f11064287d52df",
+							"protocol": "https",
+							"host": [
+								"nest-rest-api-cx57ivsnda-lm",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"records",
+								"63514fa092f11064287d52df"
+							]
+						},
+						"description": "to update the record's info (any filed)"
+					},
+					"response": [
+						{
+							"name": "record",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"category\": \"parfumes\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/records/63514fa092f11064287d52df",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"records",
+										"63514fa092f11064287d52df"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"95-a+VVCg2/78sxsm2CrWK1CDBPKH4\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "6dc1135a6efceeb7bc9498022ed8f4aa;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 14:18:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "149"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63514fa092f11064287d52df\",\n    \"category\": \"parfumes\",\n    \"description\": \"parfume jadore dior\",\n    \"priceInUah\": 3500,\n    \"userName\": \"Sofi\",\n    \"userId\": \"1\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/6357d4627e8e72f26e62dce6",
+							"protocol": "https",
+							"host": [
+								"nest-rest-api-cx57ivsnda-lm",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"users",
+								"6357d4627e8e72f26e62dce6"
+							]
+						},
+						"description": "delete user specifying id"
+					},
+					"response": [
+						{
+							"name": "user",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/6357d4627e8e72f26e62dce6",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"users",
+										"6357d4627e8e72f26e62dce6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"3d-R7V7OaTRhEe7xopCzHwD2DGltwQ\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "3f20a14c633188b013ca22bc27f8ca30;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 17:30:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6357d4627e8e72f26e62dce6\",\n    \"__v\": 0,\n    \"userName\": \"Kolya\"\n}"
+						},
+						{
+							"name": "user",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/6357d4627e8e72f26e62dce6",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"users",
+										"6357d4627e8e72f26e62dce6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "a5445141c6ec6c45b2eaf3bb7f27aadc"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 17:32:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "record",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/records/6351507792f11064287d52e1",
+							"protocol": "https",
+							"host": [
+								"nest-rest-api-cx57ivsnda-lm",
+								"a",
+								"run",
+								"app"
+							],
+							"path": [
+								"records",
+								"6351507792f11064287d52e1"
+							]
+						},
+						"description": "deleting record - specifying id"
+					},
+					"response": [
+						{
+							"name": "record",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/records/6351507792f11064287d52e1",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"records",
+										"6351507792f11064287d52e1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"93-V9oXfmbqBChzmRDx5EDRXwCnEpI\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "f79514b30c954f2d4a657f294122f215;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 17:34:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6351507792f11064287d52e1\",\n    \"category\": \"clothes\",\n    \"description\": \"jacket reiss grey\",\n    \"priceInUah\": 15500,\n    \"userName\": \"Sofi\",\n    \"userId\": \"1\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "record",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://nest-rest-api-cx57ivsnda-lm.a.run.app/records/6351507792f11064287d52e1",
+									"protocol": "https",
+									"host": [
+										"nest-rest-api-cx57ivsnda-lm",
+										"a",
+										"run",
+										"app"
+									],
+									"path": [
+										"records",
+										"6351507792f11064287d52e1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "e43ea14b49ba53179169cdadb3d2c5a6;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 Nov 2022 17:35:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
