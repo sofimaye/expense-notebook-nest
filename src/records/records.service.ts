@@ -12,17 +12,23 @@ import { Logger } from 'winston';
 export class RecordsService {
   constructor(
     @InjectModel(Record.name) private recordModel: Model<RecordDocument>,
+    // add a UsersService to have access to userId
+    @Inject(UsersService)
+    private readonly userService: UsersService,
     @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: Logger,
   ) {}
-
-  // add a UsersService to have access to userId
-  @Inject(UsersService)
-  private readonly userService: UsersService;
 
   async getAll(): Promise<Record[]> {
     const records = this.recordModel.find().exec();
     this.logger.info(`Records: ${records}`);
     return records;
+  }
+  //get all records by user_id
+  async getAllRecordsByUserId(userId: string): Promise<Record[]> {
+    const user = await this.userService.findOne(userId);
+    if (!user) throw new Error(`User not found: ${userId}`);
+
+    return this.recordModel.find({ userId });
   }
 
   async getById(id: string): Promise<Record> {

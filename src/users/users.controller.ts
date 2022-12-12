@@ -6,20 +6,30 @@ import {
   Patch,
   Param,
   Delete,
+  Inject,
+  forwardRef,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './schemas/user.schema';
+import { Record } from '../records/schemas/record.schema';
 import { UserAndJokeDto } from './dto/user-joke.dto';
+import { RecordsService } from '../records/records.service';
 
 @Controller('users')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
+  @Inject(forwardRef(() => RecordsService))
+  private readonly recordService: RecordsService;
 
   @Get()
   findAll(): Promise<User[]> {
     return this.usersService.findAll();
+  }
+  @Get(':id/records')
+  getAllRecordsByUserId(@Param('id') id: string): Promise<Record[]> {
+    return this.recordService.getAllRecordsByUserId(id);
   }
 
   @Post()
