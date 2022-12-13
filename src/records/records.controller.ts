@@ -6,11 +6,14 @@ import {
   Param,
   Patch,
   Post,
+  Request,
+  UseGuards,
 } from '@nestjs/common';
 import { CreateRecordDto } from './dto/create-record.dto';
 import { UpdateRecordDto } from './dto/update-record.dto';
 import { RecordsService } from './records.service';
 import { Record } from './schemas/record.schema';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Controller('records')
 export class RecordsController {
@@ -24,18 +27,24 @@ export class RecordsController {
     return this.recordsService.getById(id).catch(() => 'record is not exist');
   }
   @Post()
-  create(@Body() createRecordDto: CreateRecordDto): Promise<Record> {
-    return this.recordsService.create(createRecordDto);
+  @UseGuards(JwtAuthGuard)
+  create(
+    @Body() createRecordDto: CreateRecordDto,
+    @Request() req,
+  ): Promise<Record> {
+    return this.recordsService.create(req.user.userId, createRecordDto);
   }
   @Delete(':id')
   remove(@Param('id') id: string): Promise<Record> {
     return this.recordsService.remove(id);
   }
   @Patch(':id')
+  @UseGuards(JwtAuthGuard)
   update(
     @Param('id') id: string,
     @Body() updateRecordDto: UpdateRecordDto,
+    @Request() req,
   ): Promise<Record> {
-    return this.recordsService.update(id, updateRecordDto);
+    return this.recordsService.update(id, req.user.userId, updateRecordDto);
   }
 }

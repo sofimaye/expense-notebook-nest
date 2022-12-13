@@ -7,6 +7,7 @@ import { Record, RecordDocument } from './schemas/record.schema';
 import { UsersService } from '../users/users.service';
 import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
 import { Logger } from 'winston';
+import {use} from "passport";
 
 @Injectable()
 export class RecordsService {
@@ -37,11 +38,8 @@ export class RecordsService {
     return oneRecord;
   }
 
-  async create(recordDto: CreateRecordDto): Promise<Record> {
-    const user = await this.userService.findOne(recordDto.userId);
-    if (!user) throw new Error(`User not found: ${recordDto.userId}`);
-
-    const newRecord = new this.recordModel(recordDto);
+  async create(userId: string, recordDto: CreateRecordDto): Promise<Record> {
+    const newRecord = new this.recordModel({ ...recordDto, userId });
     this.logger.info(`New record: ${newRecord}`);
     return newRecord.save();
   }
@@ -51,7 +49,14 @@ export class RecordsService {
     this.logger.info(`Removed record: ${removedRecord}`);
     return removedRecord;
   }
-  async update(id: string, recordDto: UpdateRecordDto): Promise<Record> {
+  async update(
+    id: string,
+    userId: string,
+    recordDto: UpdateRecordDto,
+  ): Promise<Record> {
+    const record = await this.recordModel.findById(id);
+    if (record.userId !== userId)
+      throw Error(`User doesn't have access to the record`);
     const updatedRecord = this.recordModel.findByIdAndUpdate(id, recordDto, {
       new: true,
     });

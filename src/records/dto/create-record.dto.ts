@@ -7,6 +7,4 @@ export class CreateRecordDto {
   readonly description: string;
   @IsPositive()
   readonly priceInUah: number;
-  @IsNotEmpty()
-  readonly userId: string;
 }
