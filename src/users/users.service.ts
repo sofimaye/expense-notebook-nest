@@ -61,6 +61,12 @@ export class UsersService {
     return user;
   }
 
+  async findByUserName(userName: string): Promise<User | null> {
+    const user = this.userModel.findOne({ userName });
+    this.logger.info(`Found user: ${user}`);
+    return user;
+  }
+
   async update(id: string, updateUserDto: UpdateUserDto): Promise<User> {
     const updatedUser = this.userModel.findByIdAndUpdate(id, updateUserDto, {
       new: true,

@@ -6,5 +6,7 @@ export type UserDocument = User & Document;
 export class User {
   @Prop()
   userName: string;
+  @Prop()
+  password: string;
 }
 export const UserSchema = SchemaFactory.createForClass(User);

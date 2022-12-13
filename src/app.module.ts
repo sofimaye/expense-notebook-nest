@@ -6,8 +6,11 @@ import { WinstonModule } from 'nest-winston';
 import { format, transports } from 'winston';
 import { HttpExceptionFilter } from './exceptions/http-exception.filter';
 import { APP_FILTER } from '@nestjs/core';
+import { AuthModule } from './auth/auth.module';
+import { AppController } from './app.controller';
 
 @Module({
+  controllers: [AppController],
   imports: [
     RecordsModule,
     MongooseModule.forRoot(
@@ -26,12 +29,13 @@ import { APP_FILTER } from '@nestjs/core';
         new transports.File({ filename: 'debug.log', level: 'debug' }),
       ],
     }),
+    AuthModule,
   ],
-  providers: [
-    {
-      provide: APP_FILTER,
-      useClass: HttpExceptionFilter,
-    },
-  ],
+  // providers: [
+  //   {
+  //     provide: APP_FILTER,
+  //     useClass: HttpExceptionFilter,
+  //   },
+  // ],
 })
 export class AppModule {}
