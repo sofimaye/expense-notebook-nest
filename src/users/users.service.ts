@@ -22,14 +22,14 @@ export class UsersService {
 
   async create(createUserDto: CreateUserDto): Promise<User> {
     const newUser = new this.userModel(createUserDto);
-    this.logger.info(`New user created: ${newUser.userName}`);
+    this.logger.info(`New user created: ${newUser.username}`);
     return newUser.save();
   }
   // get userById, get random joke and combine them
   async findUserWithJoke(id: string): Promise<UserAndJokeDto> {
     const joke = await this.jokesService.getRandomJoke();
     const user = await this.userModel.findById(id);
-    this.logger.info(`Fetched: ${user.userName} and joke`, joke);
+    this.logger.info(`Fetched: ${user.username} and joke`, joke);
     return {
       joke,
       user,
@@ -61,8 +61,8 @@ export class UsersService {
     return user;
   }
 
-  async findByUserName(userName: string): Promise<User | null> {
-    const user = this.userModel.findOne({ userName });
+  async findByUserName(username: string): Promise<User | null> {
+    const user = this.userModel.findOne({ username });
     this.logger.info(`Found user: ${user}`);
     return user;
   }
