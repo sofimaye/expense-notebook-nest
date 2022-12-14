@@ -71,3 +71,51 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+INSTRUCTIONS HOW TO WORK WITH
+
+GET all users:
+https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/
+
+PATCH a user:
+https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/:id
+
+DELETE a user:
+https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/:id
+
+GET user with a joke (integration 3-rd party service):
+https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/:id/joke
+
+GET user with a joke parallel (for time saving):
+https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/:id/joke/parallel
+
+GET all records by user's id:
+https://nest-rest-api-cx57ivsnda-lm.a.run.app/users/:id/records
+
+GET all records:
+https://nest-rest-api-cx57ivsnda-lm.a.run.app/records
+
+GET record by its id:
+https://nest-rest-api-cx57ivsnda-lm.a.run.app/records/:id
+
+DELETE record by its id:
+https://nest-rest-api-cx57ivsnda-lm.a.run.app/records/:id
+
+POST and PATCH (only authorized user can):
+To POST a record:
+1. authenticate a user:
+   POST https://nest-rest-api-cx57ivsnda-lm.a.run.app/auth/login
+   body example
+   {
+   "username": "Stella",
+   "password": "45678299"
+   }
+2. take the token and add to header(authorization bearer token)
+   POST https://nest-rest-api-cx57ivsnda-lm.a.run.app/records
+   (example)
+   {
+   "category": "make-up",
+   "description": "micellar water",
+   "priceInUah": 300
+   }
+   PATCH(the same steps)
